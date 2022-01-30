@@ -6,13 +6,16 @@ local conf = require("telescope.config").values
 local actions = require("telescope.actions")
 
 --add .gitignore to telescope.file_ignore_patterns
-lines = {}
-ignoreFile = ".gitignore"
-print(ignoreFile)
-for line in io.lines(ignoreFile) do 
-    print(line)
-    lines[#lines + 1] = line
+
+git_ignore = io.open(".gitignore","r")
+if git_ignore ~= nil then
+    lines = {}
+    ignore_lines = git_ignore:lines()
+    for line in ignore_lines do
+        lines[#lines + 1] = line
+    end
 end
+
 
 require("telescope").setup({
     defaults = {
