@@ -1,3 +1,19 @@
+
+### Plugins
+
+https://github.com/tmux-plugins/tmux-battery
+
+
+https://github.com/tmux-plugins/tmux-cpu
+
+
+https://github.com/tmux-plugins/tpm
+
+
+### Theme
+ 
+https://tmuxcheatsheet.com/theming-and-customizing/
+
 # tMUX
 
 [Ctr + a] + detach
